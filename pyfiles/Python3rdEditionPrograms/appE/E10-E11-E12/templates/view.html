@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Sine graphing</title>
+</head>
+
+<body>
+<h1>Lets graph the sine function</h1>
+
+Let's plot some variation on a sine wave. We are plotting the equation
+<p>
+<font face="Courier">
+A * sin(B*x) + C 
+</font>
+
+for x in the range 0 to 4&pi;
+</p>
+
+<br>
+<form method=post action="">
+<br>
+
+<table>
+  {% for field in form %}
+  <tr>
+    <td>
+      {{ field.name }}
+    </td>
+    <td>
+      {{ field }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<p>
+<input type=submit value=plot>
+</form>
+</p>
+
+<p>
+{% if result != None %}
+<img src="{{ result }}" width=500>
+{% endif %}
+</p>
+
+</body>
+</html>
